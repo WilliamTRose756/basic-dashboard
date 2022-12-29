@@ -1,0 +1,17 @@
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 200px;
+}
+
+.inner-square {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: gray;
+  width: 50%;
+  height: 50%;
+}
