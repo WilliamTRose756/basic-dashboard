@@ -13,14 +13,18 @@ const getData = async () => {
 
 function DisplayTwo() {
   const [data, setData] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getData().then((response) => {
       setData(response);
+      setIsLoading(false);
     });
   }, []);
 
-  return (
+  return isLoading ? (
+    <h2 style={{ textAlign: "center" }}>Loading...</h2>
+  ) : (
     <>
       <div className="main-container">
         <div className="device-inventory-container">
