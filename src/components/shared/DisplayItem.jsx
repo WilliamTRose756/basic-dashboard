@@ -1,8 +1,7 @@
 function DisplayItem({ datum }) {
   return (
-    <div className="inner-square">
-      <p>{`${datum.device} is currently in ${datum.location}`}</p>
-    </div>
+      <p style={{fontSize: '10px' }}>{datum.device} </p>
+
   );
 }
 

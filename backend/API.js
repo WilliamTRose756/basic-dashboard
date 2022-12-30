@@ -33,7 +33,6 @@ app.get("/data", (req, res) => {
     } else {
       // Send the object data as a JSON response
       res.json(JSON.parse(data.Body.toString()));
-      console.log(res);
     }
   });
 });

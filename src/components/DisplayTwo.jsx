@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DeviceInventory from "./DeviceInventory";
 import DisplayItem from "./shared/DisplayItem";
 
 const getData = async () => {
@@ -21,15 +22,66 @@ function DisplayTwo() {
 
   return (
     <>
-      <div className="container">
-        <div className="inner-square">
-          {/* {data.map((datum) => (
-            <DisplayItem datum={datum} key={datum.device} />
-          ))} */}
+      <div className="main-container">
+        <div className="device-inventory-container">
+          {data &&
+            data.map((datum) => {
+              return <DeviceInventory datum={datum} key={datum.device} />;
+            })}
         </div>
-        <div className="inner-square">Zone 2</div>
-        <div className="inner-square">Zone 3</div>
-        <div className="inner-square">Zone 4</div>
+        <div className="container">
+          <div className="inner-square">
+            <ul style={{ paddingLeft: "0" }}>
+              {data &&
+                data.map((datum) => {
+                  return (
+                    datum.location === "zone_1" && (
+                      <DisplayItem datum={datum} key={datum.device} />
+                    )
+                  );
+                })}
+            </ul>
+          </div>
+
+          <div className="inner-square">
+            <ul style={{ paddingLeft: "0" }}>
+              {data &&
+                data.map((datum) => {
+                  return (
+                    datum.location === "zone_2" && (
+                      <DisplayItem datum={datum} key={datum.device} />
+                    )
+                  );
+                })}
+            </ul>
+          </div>
+
+          <div className="inner-square">
+            <ul style={{ paddingLeft: "0" }}>
+              {data &&
+                data.map((datum) => {
+                  return (
+                    datum.location === "zone_3" && (
+                      <DisplayItem datum={datum} key={datum.device} />
+                    )
+                  );
+                })}
+            </ul>
+          </div>
+
+          <div className="inner-square">
+            <ul style={{ paddingLeft: "0" }}>
+              {data &&
+                data.map((datum) => {
+                  return (
+                    datum.location === "zone_4" && (
+                      <DisplayItem datum={datum} key={datum.device} />
+                    )
+                  );
+                })}
+            </ul>
+          </div>
+        </div>
       </div>
     </>
   );
