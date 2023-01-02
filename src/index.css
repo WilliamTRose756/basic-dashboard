@@ -2,12 +2,18 @@
   display: flex;
   flex-direction: row;
 }
+
+.zone-grid {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  width: 50%;
+}
 .container {
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  width: 300px;
+  width: 100%;
   height: 300px;
 }
 
@@ -18,6 +24,9 @@
 
 .device-inventory-instance {
   list-style: none;
+  border: solid 1px black;
+  text-align: left;
+  padding-left: 20px;
 }
 
 .inner-square {
@@ -28,4 +37,10 @@
   width: 100%;
   height: 100%;
   border: 1px solid black;
+}
+
+.refresh-button-div {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
