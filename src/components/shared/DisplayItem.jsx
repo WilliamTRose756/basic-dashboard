@@ -1,7 +1,9 @@
 function DisplayItem({ datum }) {
   return (
-      <p style={{fontSize: '10px' }}>{datum.device} </p>
-
+    <>
+      {datum.device === "6ATF12018" && <h4>Kuzi</h4>}
+      {datum.device === "6ATF12016" && <h4>William</h4>}
+    </>
   );
 }
 
