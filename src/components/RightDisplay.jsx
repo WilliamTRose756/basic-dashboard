@@ -7,7 +7,8 @@ function RightDisplay() {
 
   return (
     <Box flex={1}>
-      <div className="device-inventory-container">
+      <div>
+        <h3>Selected Devices:</h3>
         {data &&
           data.map((datum) => {
             return <DeviceInventory datum={datum} key={datum.device} />;

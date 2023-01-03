@@ -13,6 +13,7 @@ import {
 import Badge from "@mui/material/Badge";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Notifications } from "@mui/icons-material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const StyledToolbar = styled(Toolbar)({
   display: "flex",
@@ -54,8 +55,9 @@ function Navbar() {
           Location Positioning
         </Typography>
         <LocationOnIcon sx={{ display: { xs: "block", sm: "none" } }} />
-        <Search>
-          <InputBase placeholder="Search users..." />
+        <Search sx={{ color: "gray", display: "flex", alignItems: "center" }}>
+          <SearchIcon />
+          <InputBase placeholder="Search..." />
         </Search>
         <Icons>
           <Badge badgeContent={1} color="error">

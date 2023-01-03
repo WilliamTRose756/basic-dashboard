@@ -1,7 +1,7 @@
 import { Box, Stack } from "@mui/system";
 import DisplayTwo from "./components/CenterDisplay";
 import RightDisplay from "./components/RightDisplay";
-import Sidebar from "./components/Leftbar";
+import Sidebar from "./components/LeftDisplay";
 import { LocationProvider } from "./context/LocationContext";
 import Navbar from "./components/Navbar";
 

@@ -8,12 +8,27 @@ import {
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PeopleIcon from "@mui/icons-material/People";
+import PublicIcon from "@mui/icons-material/Public";
 import { Box } from "@mui/system";
 
 function Sidebar() {
   return (
-    <Box sx={{ display: { xs: "none", sm: "block" } }} flex={1}>
+    <Box
+      sx={{
+        display: {
+          xs: "none",
+          sm: "block",
+        },
+      }}
+      flex={1}
+    >
       <List>
+        <ListItem>
+          <img
+            style={{ height: "100px", width: "100px" }}
+            src={process.env.PUBLIC_URL + "/modjoul2.png"}
+          />
+        </ListItem>
         <ListItem disablePadding sx={{ mb: 2 }}>
           <ListItemButton component="a" href="">
             <ListItemIcon>
@@ -36,6 +51,14 @@ function Sidebar() {
               <PeopleIcon />
             </ListItemIcon>
             <ListItemText primary="Users" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding sx={{ mb: 2 }}>
+          <ListItemButton component="a" href="">
+            <ListItemIcon>
+              <PublicIcon />
+            </ListItemIcon>
+            <ListItemText primary="Global View" />
           </ListItemButton>
         </ListItem>
       </List>
