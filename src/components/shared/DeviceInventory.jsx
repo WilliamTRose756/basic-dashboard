@@ -1,6 +1,3 @@
-import { ExpandMore } from "@mui/icons-material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
 import SaveAltIcon from "@mui/icons-material/SaveAlt";
 import {
   Avatar,
@@ -8,7 +5,6 @@ import {
   CardActions,
   CardContent,
   CardHeader,
-  CardMedia,
   IconButton,
   Typography,
 } from "@mui/material";
