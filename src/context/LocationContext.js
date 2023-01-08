@@ -6,6 +6,7 @@ export const LocationProvider = ({ children }) => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isRefresh, setIsRefresh] = useState(false);
+  const [isSwitched, setIsSwitched] = useState(false);
 
   //   Fetch up to date data
   const getData = async () => {
@@ -35,6 +36,8 @@ export const LocationProvider = ({ children }) => {
         isRefresh,
         setIsRefresh,
         getData,
+        isSwitched,
+        setIsSwitched,
       }}
     >
       {children}

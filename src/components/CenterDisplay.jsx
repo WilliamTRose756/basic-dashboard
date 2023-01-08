@@ -68,7 +68,7 @@ function DisplayTwo() {
         <div className="container">
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone4Data.length === 0 && <h4>4</h4>}
+              {zone4Data.length === 0 && <h4>Zone 4</h4>}
               {zone4Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}
@@ -76,7 +76,7 @@ function DisplayTwo() {
           </div>
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone5Data.length === 0 && <h4>5</h4>}
+              {zone5Data.length === 0 && <h4>Zone 5</h4>}
               {zone5Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}
@@ -84,7 +84,7 @@ function DisplayTwo() {
           </div>
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone6Data.length === 0 && <h4>6</h4>}
+              {zone6Data.length === 0 && <h4>Zone 6</h4>}
               {zone6Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}
@@ -92,7 +92,7 @@ function DisplayTwo() {
           </div>
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone3Data.length === 0 && <h4>3</h4>}
+              {zone3Data.length === 0 && <h4>Zone 3</h4>}
               {zone3Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}
@@ -100,7 +100,7 @@ function DisplayTwo() {
           </div>
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone2Data.length === 0 && <h4>2</h4>}
+              {zone2Data.length === 0 && <h4>Zone 2</h4>}
               {zone2Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}
@@ -108,7 +108,7 @@ function DisplayTwo() {
           </div>
           <div className="inner-square">
             <ul style={{ paddingLeft: "0" }}>
-              {zone1Data.length === 0 && <h4>1</h4>}
+              {zone1Data.length === 0 && <h4>Zone 1</h4>}
               {zone1Data.map((datum) => {
                 return <DisplayItem datum={datum} key={datum.device} />;
               })}

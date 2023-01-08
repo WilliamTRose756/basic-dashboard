@@ -10,9 +10,12 @@ import {
 } from "@mui/material";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ClearIcon from "@mui/icons-material/Clear";
+import { useContext } from "react";
+import LocationContext from "../../context/LocationContext";
 
 function DeviceInventory({ datum }) {
   const { device, location, timestamp } = datum;
+  const { isSwitched } = useContext(LocationContext);
   return (
     <>
       {device === "6ATF12018" && (
@@ -29,13 +32,20 @@ function DeviceInventory({ datum }) {
               </IconButton>
             }
             title="Kuzi Rusere"
-            subheader={timestamp}
+            // subheader={timestamp}
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
               Device ID: {device}
             </Typography>
           </CardContent>
+          {isSwitched && (
+            <CardContent>
+              <Typography variant="body2" color="text.secondary">
+                Noise (Decibels): 40 dB
+              </Typography>
+            </CardContent>
+          )}
           <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
               <ClearIcon />
@@ -61,13 +71,21 @@ function DeviceInventory({ datum }) {
               </IconButton>
             }
             title="William Rose"
-            subheader={timestamp}
+            // subheader={timestamp}
           />
           <CardContent>
             <Typography variant="body2" color="text.secondary">
               Device ID: {device}
             </Typography>
           </CardContent>
+          {isSwitched && (
+            <CardContent>
+              <Typography variant="body2" color="red">
+                Noise (Decibels): 100 dB
+              </Typography>
+            </CardContent>
+          )}
+
           <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
               <ClearIcon />

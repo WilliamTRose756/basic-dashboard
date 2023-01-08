@@ -4,14 +4,27 @@ import {
   ListItemButton,
   ListItemIcon,
   ListItemText,
+  Switch,
 } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import PeopleIcon from "@mui/icons-material/People";
 import PublicIcon from "@mui/icons-material/Public";
 import { Box } from "@mui/system";
+import { useContext } from "react";
+import LocationContext from "../context/LocationContext";
 
 function Sidebar() {
+  const { isSwitched, setIsSwitched } = useContext(LocationContext);
+
+  const handleSwitchChange = () => {
+    if (isSwitched) {
+      setIsSwitched(false);
+    } else {
+      setIsSwitched(true);
+    }
+  };
+
   return (
     <Box
       sx={{
@@ -60,6 +73,9 @@ function Sidebar() {
             </ListItemIcon>
             <ListItemText primary="Global View" />
           </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding sx={{ mb: 2 }}>
+          <Switch onChange={handleSwitchChange} color="warning" />
         </ListItem>
       </List>
     </Box>
