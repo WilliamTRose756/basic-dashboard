@@ -52,7 +52,7 @@ function Navbar() {
     <AppBar position="sticky">
       <StyledToolbar>
         <img
-          style={{ height: "100px", width: "100px" }}
+          style={{ height: "25px", width: "140px" }}
           src={process.env.PUBLIC_URL + "/logo_horiz_white.png"}
         />
         <LocationOnIcon sx={{ display: { xs: "block", sm: "none" } }} />
