@@ -1,5 +1,7 @@
 import SaveAltIcon from "@mui/icons-material/SaveAlt";
 import {
+  Alert,
+  AlertTitle,
   Avatar,
   Card,
   CardActions,
@@ -40,11 +42,11 @@ function DeviceInventory({ datum }) {
             </Typography>
           </CardContent>
           {isSwitched && (
-            <CardContent>
-              <Typography variant="body2" color="text.secondary">
-                Noise (Decibels): 40 dB
-              </Typography>
-            </CardContent>
+            <>
+              <Alert severity="info">
+                Noise level — <strong>40 dB</strong>
+              </Alert>
+            </>
           )}
           <CardActions disableSpacing>
             <IconButton aria-label="add to favorites">
@@ -79,11 +81,12 @@ function DeviceInventory({ datum }) {
             </Typography>
           </CardContent>
           {isSwitched && (
-            <CardContent>
-              <Typography variant="body2" color="red">
-                Noise (Decibels): 100 dB
-              </Typography>
-            </CardContent>
+            <>
+              <Alert severity="warning">
+                <AlertTitle>Warning</AlertTitle>
+                Noise level — <strong>100 dB</strong>
+              </Alert>
+            </>
           )}
 
           <CardActions disableSpacing>
