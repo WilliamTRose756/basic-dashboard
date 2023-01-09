@@ -51,9 +51,10 @@ function Navbar() {
   return (
     <AppBar position="sticky">
       <StyledToolbar>
-        <Typography variant="h6" sx={{ display: { xs: "none", sm: "block" } }}>
-          Location Positioning
-        </Typography>
+        <img
+          style={{ height: "100px", width: "100px" }}
+          src={process.env.PUBLIC_URL + "/logo_horiz_white.png"}
+        />
         <LocationOnIcon sx={{ display: { xs: "block", sm: "none" } }} />
         <Search sx={{ color: "gray", display: "flex", alignItems: "center" }}>
           <SearchIcon />
